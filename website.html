@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learnopedia| Learnopedia</title>
+    <link rel="icon" type="image/x-icon" href="/image/magic.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    
+</head>
+
+<body>
+  
+  <nav>
+    <div class="wrapper">
+      <div class="logo"><a href="image/magic.jpg">Learnopedia</a></div>
+      <input type="radio" name="slider" id="menu-btn">
+      <input type="radio" name="slider" id="close-btn">
+      <ul class="nav-links">
+        <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+        <li><a href="#">Home</a></li>
+        
+        <li>
+          <a href="#" class="desktop-item">Features</a>
+          <input type="checkbox" id="showDrop">
+          <label for="showDrop" class="mobile-item">Dropdown Menu</label>
+          <ul class="drop-menu">
+            <li><a href="./dictonary.html">Dictionary</a></li>
+            <li><a href="./quotes.html">Quotes</a></li>
+            <li><a href="./translator.html">Translator</a></li>
+            <li><a href="./speech.html"> Speech converter</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="desktop-item">Quiz</a>
+          <input type="checkbox" id="showMega">
+          <label for="showMega" class="mobile-item">Quiz</label>
+          <div class="mega-box">
+            <div class="content">
+              <div class="row">
+                
+              </div>
+              <div class="row">
+                <header>Grammar Quiz</header>
+                <ul class="mega-links">
+                  <li><a href="./homophone.html">Homophones</a></li>
+                  <li><a href="parts.html">Tenses</a></li>
+                  <li><a href="vocab.html">Vocabulary</a></li>
+                </ul>
+              </div>
+              <div class="row">
+                <header>Aptitude</header>
+                <ul class="mega-links">
+                  <li><a href="./calender.html">Calender</a></li>
+                  <li><a href="./odd.html">Odd one out</a></li>
+                  <li><a href="./percentage.html">Percentage</a></li>
+                  
+                  
+                </ul>
+              </div>
+              <div class="row">
+                <header>General</header>
+                <ul class="mega-links">
+                  <li><a href="invent.html">Inventories</a></li>
+                  <li><a href="./gk.html">General Knowledge</a></li>
+                 <li><a href="./day.html">Days & Years</a></li> 
+                </ul>
+              </div>
+            </div>
+          </div>
+        <li><a href="loginn.html">Login</a></li>
+
+        <li><a href="chat.html">Feedback</a></li>
+        
+      </ul>
+      <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+    </div>
+    
+  </nav>
+  
+  
+  
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+nav{
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  
+  background: #3504e7;
+}
+nav .wrapper{
+  position: relative;
+  max-width: 1300px;
+  padding: 0px 30px;
+  height: 70px;
+  line-height: 70px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper .logo a{
+  color: #f2f2f2;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.wrapper .nav-links{
+  display: inline-flex;
+}
+.nav-links li{
+  list-style: none;
+}
+.nav-links li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 9px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.nav-links li a:hover{
+  background: #3A3B3C;
+}
+.nav-links .mobile-item{
+  display: none;
+}
+.nav-links .drop-menu{
+  position: absolute;
+  background: #242526;
+  width: 180px;
+  line-height: 45px;
+  top: 85px;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+.nav-links li:hover .drop-menu,
+.nav-links li:hover .mega-box{
+  transition: all 0.3s ease;
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+.drop-menu li a{
+  width: 100%;
+  display: block;
+  padding: 0 0 0 15px;
+  font-weight: 400;
+  border-radius: 0px;
+}
+.mega-box{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 0 30px;
+  top: 85px;
+  opacity: 0;
+  visibility: hidden;
+}
+.mega-box .content{
+  background: #242526;
+  padding: 25px 20px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+.mega-box .content .row{
+  width: calc(25% - 30px);
+  line-height: 45px;
+}
+.content .row img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.content .row header{
+  color: #f2f2f2;
+  font-size: 20px;
+  font-weight: 500;
+}
+.content .row .mega-links{
+  margin-left: -40px;
+  border-left: 1px solid rgba(255,255,255,0.09);
+}
+.row .mega-links li{
+  padding: 0 20px;
+}
+.row .mega-links li a{
+  padding: 0px;
+  padding: 0 20px;
+  color: #d9d9d9;
+  font-size: 17px;
+  display: block;
+}
+.row .mega-links li a:hover{
+  color: #f2f2f2;
+}
+.wrapper .btn{
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+.wrapper .btn.close-btn{
+  position: absolute;
+  right: 30px;
+  top: 10px;
+}
+
+@media screen and (max-width: 970px) {
+  .wrapper .btn{
+    display: block;
+  }
+  .wrapper .nav-links{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 350px;
+    top: 0;
+    left: -100%;
+    background: #242526;
+    display: block;
+    padding: 50px 10px;
+    line-height: 50px;
+    overflow-y: auto;
+    box-shadow: 0px 15px 15px rgba(0,0,0,0.18);
+    transition: all 0.3s ease;
+  }
+  /* custom scroll bar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #242526;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #3A3B3C;
+  }
+  #menu-btn:checked ~ .nav-links{
+    left: 0%;
+  }
+  #menu-btn:checked ~ .btn.menu-btn{
+    display: none;
+  }
+  #close-btn:checked ~ .btn.menu-btn{
+    display: block;
+  }
+  .nav-links li{
+    margin: 15px 10px;
+  }
+  .nav-links li a{
+    padding: 0 20px;
+    display: block;
+    font-size: 20px;
+  }
+  .nav-links .drop-menu{
+    position: static;
+    opacity: 1;
+    top: 65px;
+    visibility: visible;
+    padding-left: 20px;
+    width: 100%;
+    max-height: 0px;
+    overflow: hidden;
+    box-shadow: none;
+    transition: all 0.3s ease;
+  }
+  #showDrop:checked ~ .drop-menu,
+  #showMega:checked ~ .mega-box{
+    max-height: 100%;
+  }
+  .nav-links .desktop-item{
+    display: none;
+  }
+  .nav-links .mobile-item{
+    display: block;
+    color: #f2f2f2;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  .nav-links .mobile-item:hover{
+    background: #3A3B3C;
+  }
+  .drop-menu li{
+    margin: 0;
+  }
+  .drop-menu li a{
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  .mega-box{
+    position: static;
+    top: 65px;
+    opacity: 1;
+    visibility: visible;
+    padding: 0 20px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .mega-box .content{
+    box-shadow: none;
+    flex-direction: column;
+    padding: 20px 20px 0 20px;
+  }
+  .mega-box .content .row{
+    width: 100%;
+    margin-bottom: 15px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .mega-box .content .row:nth-child(1),
+  .mega-box .content .row:nth-child(2){
+    border-top: 0px;
+  }
+  .content .row .mega-links{
+    border-left: 0px;
+    padding-left: 15px;
+  }
+  .row .mega-links li{
+    margin: 0;
+  }
+  .content .row header{
+    font-size: 19px;
+  }
+}
+nav input{
+  display: none;
+}
+
+.body-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  padding: 0 30px;
+}
+.body-text div{
+  font-size: 45px;
+  font-weight: 600;
+}
+.footer {
+            margin: 0px;
+            color: whitesmoke;
+            background-position: absolute;
+            padding-left: 100px;
+            padding-top: 50px;
+            height: 250px;
+            background-color: rgb(53, 51, 51);
+            font-family: Arial, Helvetica, sans-serif;
+
+
+
+
+        }
+        .fa {
+            padding-left: 500px;
+            margin-left: 500px;
+            margin-top: -160px;
+            padding-bottom: 0px;
+            color: rgb(80, 15, 231);
+
+
+        }
+  
+
+</style>
+
+    <style>
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center
+      }
+      img {
+        max-width: 100%
+      }
+      .image {
+        flex-basis: 100%
+      }
+      .text {
+        font-size: 20px;
+        padding-left: 20px;
+      }
+    </style>
+
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <br><br><img src="image/ds.jpeg" width="1000px" height="500px">
+    <div class="text">Learn with us!!</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <br><br>
+    <img src="image/ref1.webp" width="1000px" height="500px">
+    <div class="text">How to achieve goals</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <br><br><img src="image/mot.jpeg" width="1000px" height="500px">
+    <div class="text">Tips of studying</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+<style>
+  * {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: rgb(133, 111, 244);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #cf06f8;
+  font-size: 25px;
+  padding: 8px 12px;
+  position: bottom;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+</style>
+<script>
+  let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+    <style>
+      .container {
+        display: flex;
+        align-items: left;
+        justify-content:left
+      }
+      img {
+        max-width: 100%
+      }
+      .image {
+        flex-basis: 20%
+      }
+      .text {
+        font-size: 20px;
+        padding-left: 10px;
+      }
+    </style>
+  
+        <div class="vl"></div>
+       
+    <div class="container">
+      <div class="image">
+        <img src="image/word of.gif" width="200px" height="200px">
+      </div>
+      <body>
+        <p align="left">
+          <big>
+            <mark>Word: Sham</mark>
+          </big><br>
+          <strong>
+            Definition:Falsely present something as the truth<br>
+            synonyms:Fake<br>
+            Antonyms: True<br>
+          </strong>
+        </p>
+        <img src="image/verti.jpg" width="50px" height="200px">
+        <br><img src="image/game2.gif" width="200px" height="200px"><br>
+        <br>
+          
+          <br>
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <style>
+                    @import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+                </style>
+            </head>
+            <body>
+                <div class="wrapper two">
+                    <div class="neon">
+                       <h3>Learn<br> with<br>Games</h3>
+
+                    </div>
+                </div>
+                <style>
+                  .wrapper.two {
+    background-color: #ffffff00;
+    font-size: 2rem;
+    font-family: "Play", sans-serif;
+}
+.neon h3 {
+    margin: 1rem auto;
+    animation: neon 1s ease infinite;
+}
+@keyframes neon {
+    0%,
+    50% {
+        text-shadow: 0 0 10px #ef00e3a8, 0 0 20px #ef00e3a8, 0 0 20px #ef00e3a8, 0 0 20px #ef00e3a8, 0 0 2px #fed128, 2px 2px 2px #806914;
+        color: #f5efcb;
+    }
+    10% {
+        text-shadow: 0 0 2px #800e0b, 0 0 5px #800e0b, 0 0 5px #800e0b, 0 0 5px #800e0b, 0 0 2px #800e0b, 4px 4px 2px #40340a;
+        color: #eda0d3;
+    }
+}
+</style>     
+<html>
+<head>
+<style>
+.button {
+  background-color: #640af4;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<a href="game.html" class="button">Start Playing</a>
+
+    </div>
+    <div class="ul">
+      <div>
+          <ol class="footer">
+              <p>
+                <h2 style="color:rgb(134, 35, 221)"> Learnopedia</h2>
+                247,Hybe building <br>
+                Bangtan village, <br>
+                India – 246 007 <br>
+                Phone: +9124 1306 2013 <br>
+                Email: info@learnopedia.com <br>
+                </p>
+                
+                <br><div class="Learnopedia" style="font-family: Arial, Helvetica, sans-serif;">
+                  <br>© 2023 Developed by Suganthi.G & Keerthika.S
+     
+                <div class="fa">
+                  <h2> Follow Us On</h2>
+                        <br><a href=""><img src="image/twitter.png" alt="fb" width="50px" height="50px" hspace="10"></a>
+                        <a href=""><img src="image/instagram.png" alt="insta" width="50px" height="50px" hspace="10"></a>
+                        <a href=""><img src="image/facebook.png" alt="twit" width="50px" height="50px" hspace="10"></a>
+                </div>
+    
+                
+    
+      
+          </ol>
+          
+    
+    
+          </div>
+      </div>
+    
+    </div>
+    
+    
+    
+    
+              
+              
+                       
+  </body>
+</html>
+        
